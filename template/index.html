@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hate Speech Recognition</title>
+    <script src="/static/script.js" defer></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            transition: background-color 0.5s ease-in-out; /* Smooth transition for background color */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto text-center">
+        <b>DR. BR. AMBEDKAR UNIVERSITY</b>
+        <h1 class="text-3xl font-bold mb-5">🔍 Hate Speech Recognition</h1>
+        <select id="languageSelect" class="p-2 rounded text-black">
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="te">Telugu</option>
+        </select>
+        <textarea id="textInput" class="w-full p-3 rounded text-black mt-3" placeholder="Enter text..."></textarea>
+        <button onclick="startRecording()" class="mt-3 px-5 py-2 bg-red-500 text-white rounded">🎤 Start Recording</button>
+        <button onclick="stopRecording()" class="px-5 py-2 bg-gray-500 text-white rounded">🛑 Stop</button>
+        <button onclick="analyzeText()" class="mt-3 px-5 py-2 bg-blue-500 text-white rounded">Analyze Text</button>
+        <h2 class="mt-5 text-xl" id="output"></h2>
+        
+        
+        <div id="feedbackSection" class="mt-3">
+            <p id="feedbackMessage" class="text-lg font-semibold"></p>
+            <p id="randomTweet" class="text-md italic text-gray-400"></p>
+        </div>
+
+        <div class="mt-5">
+            <canvas id="sentimentChart" width="50" height="50"></canvas>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html> 
+
+
+
+
+
+
+
+
